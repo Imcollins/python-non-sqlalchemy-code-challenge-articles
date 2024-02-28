@@ -1,6 +1,8 @@
 import ipdb
 
 class Article:
+    all = []
+
     def __init__(self, author, magazine, title):
         self.author = author
         self.magazine = magazine
@@ -23,7 +25,30 @@ class Article:
             else:
                 raise TypeError("Title must be a string")
             
-
+    @property
+    def author (self):
+        return self._author
+    
+    @author.setter
+    def author (self, new_author):
+        if isinstance(new_author, Author):
+            self._author = new_author
+        else:
+            raise TypeError("Author must be an instance of Author")
+        
+    @property
+    def magazine (self):
+        return self._magazine
+    
+    @magazine.setter
+    def magazine(self, new_magazine):
+        if isinstance(new_magazine, Magazine):
+            self._magazine = new_magazine
+        else:
+            raise TypeError("Magazine must be an instance of Magazine")
+            
+    def __repr__(self):
+       return f'<Article: author={self.author.name}, magazine={self.magazine.name}, title="{self.title}">'
         
 class Author:
     def __init__(self, name):
@@ -57,6 +82,9 @@ class Author:
 
     def topic_areas(self):
         pass
+
+    def __repr__(self):
+        return f'<Author: name = {self.name}>'
 
 class Magazine:
     def __init__(self, name, category):
@@ -103,3 +131,6 @@ class Magazine:
 
     def contributing_authors(self):
         pass
+
+    def __repr__(self):
+        return f'<Magazine: name = {self.name}, category = {self.category}>'
