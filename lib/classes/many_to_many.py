@@ -79,10 +79,11 @@ class Author:
         return list({article.magazine for article in self.articles()})
 
     def add_article(self, magazine, title):
-        pass
+        return Article(self, magazine, title)
 
     def topic_areas(self):
-        pass
+        return list({magazine.category for magazine in self.magazines()})
+        
 
     def __repr__(self):
         return f'<Author: name = {self.name}>'
@@ -125,7 +126,7 @@ class Magazine:
         return [article for article in Article.all if self == article.magazine]
 
     def contributors(self):
-        return list({article.author for article in self.articles()})
+        return list({article for article in self.articles()})
 
     def article_titles(self):
         pass
