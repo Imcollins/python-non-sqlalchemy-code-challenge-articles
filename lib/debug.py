@@ -17,7 +17,7 @@ if __name__ == '__main__':
     article_2 = Article(author_2, magazine_2, "Dating life in NYC")
     article_2 = Article(author_1, magazine_1, "Dating life in NYC")
 
-    print(author_1.magazines())
+    print(magazine_1.contributors())
 
     # don't remove this line, it's for debugging!
     # ipdb.set_trace()
