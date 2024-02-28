@@ -9,7 +9,12 @@ if __name__ == '__main__':
     print("HELLO! :) let's debug :vibing_potato:")
     author_1 = Author("Carry Bradshaw")
     author_2 = Author("Nathaniel Hawthorne")
-    print (author_1.name)
+
+    magazine_1 = Magazine("Vogue", "Fashion")
+    magazine_2 = Magazine("AD", "Architecture")
+
+    article_1 = Article(author_1, magazine_1, "How to wear a tutu with style")
+    article_2 = Article(author_2, magazine_2, "Dating life in NYC")
 
     # don't remove this line, it's for debugging!
     ipdb.set_trace()
