@@ -1,4 +1,6 @@
 # Phase 3 Code Challenge: Articles - without SQLAlchemy (Updated)
+## Short live video link
+https://youtube.com/shorts/q0FIEAsp6uE?si=T0IRJ4oPRKsLhXkw
 
 For this assignment, you will be working with a Magazine domain.
 
